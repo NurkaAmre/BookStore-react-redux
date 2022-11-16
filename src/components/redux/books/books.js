@@ -1,8 +1,5 @@
-import { v4 as uuidv4 } from 'uuid';
-
 const ADD_BOOK = 'Books/books/ADD_BOOK';
 const REMOVE_BOOK = 'Books/books/REMOVE_BOOK';
-const initialState = [];
 
 export const addBook = (payload) => ({
   type: ADD_BOOK,
@@ -14,13 +11,17 @@ export const removeBook = (payload) => ({
   payload,
 });
 
-export const booksReducer = (state = initialState, { type, payload }) => {
-  switch (type) {
+const booksReducer = (state = [{
+  id: '1', title: 'The psychoanalyst', author: 'John Katzenbach', category: 'Thriller',
+}], action) => {
+  switch (action.type) {
     case ADD_BOOK:
-      return [...state, { ...payload, id: uuidv4() }];
+      return [...state, action.payload];
     case REMOVE_BOOK:
-      return state.filter((book) => book.id !== payload);
+      return state.filter((book) => book.id !== action.payload);
     default:
       return state;
   }
 };
+
+export default booksReducer;
