@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { checkStatus } from './redux/categories/categories';
 
 const Categories = () => {
-  const status = useSelector((state) => state.categories);
+  const status = useSelector((store) => store.category);
   const dispatch = useDispatch();
 
   const handleStatus = () => dispatch(checkStatus());
