@@ -1,9 +1,9 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import BookCard from './Bookstore';
 import AddNewBook from './Addbooks';
+import BookCard from './Bookstore';
 
-const Bookstore = () => {
+const Books = () => {
   const books = useSelector((store) => store.books);
   return (
     <>
@@ -25,4 +25,4 @@ const Bookstore = () => {
   );
 };
 
-export default Bookstore;
+export default Books;

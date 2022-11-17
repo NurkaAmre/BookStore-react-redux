@@ -18,7 +18,7 @@ const BookCard = ({
       <ul>
         <li><p>Comments</p></li>
         <li>
-          <button type="button" onClick={() => dispatch(removeBook(id))}>Remove</button>
+          <button type="button" className="delete" onClick={() => dispatch(removeBook(id))}>Remove</button>
         </li>
         <li><p>Edit</p></li>
       </ul>

@@ -13,7 +13,7 @@ const AddNewBook = () => {
   const getAuthor = ({ target }) => setAuthor(target.value);
   const getCategory = (({ target }) => setCategory(target.value));
 
-  const addStore = (title, author) => {
+  const addToStore = (title, author) => {
     const book = {
       id: uuid(),
       title,
@@ -28,8 +28,8 @@ const AddNewBook = () => {
     <>
       <h3>ADD NEW BOOK</h3>
       <form>
-        <input onChange={getTitle} type="text" placeholder="book title ..." value={title} required />
-        <input onChange={getAuthor} type="text" placeholder="Author Name pls ..." value={author} required />
+        <input name="title" className="title-input" onChange={getTitle} type="text" placeholder="Book title" value={title} required />
+        <input name="author" className="author-input" onChange={getAuthor} type="text" placeholder="Author" value={author} required />
         <select name="genre" onChange={getCategory} required>
           <option value="" hidden>Genre</option>
           <option value="Action">Action</option>
@@ -39,11 +39,12 @@ const AddNewBook = () => {
           <option value="Thriller">thriller</option>
         </select>
         <button
+          className="add-button"
+          type="submit"
           onClick={(e) => {
             e.preventDefault();
-            addStore(title, author);
+            addToStore(title, author);
           }}
-          type="button"
         >
           Add book
         </button>
