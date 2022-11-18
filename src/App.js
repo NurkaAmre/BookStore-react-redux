@@ -8,11 +8,13 @@ import store from './components/redux/configureStore';
 const App = () => (
   <>
     <Provider store={store}>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Books />} />
-        <Route path="Categories" element={<Categories />} />
-      </Routes>
+      <main className="d-flex">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Books />} />
+          <Route path="Categories" element={<Categories />} />
+        </Routes>
+      </main>
     </Provider>
   </>
 );
