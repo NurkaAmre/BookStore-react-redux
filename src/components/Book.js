@@ -1,10 +1,16 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import AddNewBook from './Addbooks';
 import BookCard from './Bookstore';
+import { loadBooks } from './redux/books/books';
 
 const Books = () => {
   const books = useSelector((store) => store.books);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(loadBooks());
+  }, [dispatch]);
+
   return (
     <>
       {
@@ -14,7 +20,6 @@ const Books = () => {
               key={book.id}
               id={book.id}
               title={book.title}
-              category={book.category}
               author={book.author}
             />
           ),
