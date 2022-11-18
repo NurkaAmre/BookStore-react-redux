@@ -1,13 +1,6 @@
-:root {
-  --black: #121212;
-  --blue: #0290ff;
-  --grayBg: #f5f6fa;
-  --montserrat: 'Montserrat', sans-serif;
-  --robotoSlab: 'Roboto Slab', serif;
-  --whiteCard: #fafafa;
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Roboto+Slab:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Playfair+Display&family=Poppins:wght@400;500&display=swap');
 
-/* Globals */
 html {
   box-sizing: border-box;
 }
@@ -16,7 +9,7 @@ html {
   color: #121212;
   margin: 0;
   padding: 0;
-  font-family: var(--montserrat);
+  font-family: 'Montserrat', sans-serif;
 }
 
 *,
@@ -27,7 +20,7 @@ html {
 
 #root {
   align-items: center;
-  background-color: var(--grayBg);
+  background-color: #f5f6fa;
   display: flex;
   justify-content: center;
 }
@@ -39,12 +32,14 @@ a {
 main {
   background-color: #fafafa;
   border-radius: 4px;
-  box-shadow: 0 0 60px 0 var(--black-5);
+  box-shadow: 0 0 60px 0 rgb(118, 114, 114);
   flex-direction: column;
   height: 68.563rem;
-  margin: 0 2.5rem 4.063rem 0;
+  margin-left: 5%;
+  margin-right: 5%;
   padding: 0 0 49.625rem;
   width: 87.5rem;
+  margin-top: 5%;
 }
 
 button,
@@ -53,7 +48,6 @@ select,
   cursor: pointer;
 }
 
-/* Utilities */
 .flex-column {
   display: flex;
   flex-direction: column;
@@ -73,10 +67,9 @@ select,
   opacity: 0.5;
 }
 
-/* NavBar */
 .top-section {
   background-color: #fff;
-  height: 5.938rem;
+  height: 6rem;
   margin: 0 0 2.375rem;
   padding: 1.438rem 6.188rem 1.688rem 6.25rem;
   width: 87.5rem;
@@ -91,7 +84,7 @@ nav {
 }
 
 .logo {
-  color: var(--blue);
+  color: #0290ff;
   font-size: 2rem;
   font-stretch: normal;
   font-style: normal;
@@ -105,7 +98,7 @@ nav {
 }
 
 .logo:visited {
-  color: var(--blue);
+  color: #0290ff;
 }
 
 nav > * {
@@ -121,11 +114,6 @@ nav > * {
 
 .active {
   opacity: 1;
-}
-
-img {
-  height: 3rem;
-  width: 3rem;
 }
 
 /* BookCard */
@@ -159,8 +147,8 @@ img {
 
 .book-title {
   color: #121212;
-  font-family: var(--robotoSlab);
-  font-size: 2rem;
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.5rem;
   font-stretch: normal;
   font-style: normal;
   font-weight: bold;
@@ -171,7 +159,7 @@ img {
 
 .book-author {
   color: #4386bf;
-  font-family: var(--robotoSlab);
+  font-family: 'Roboto Slab', serif;
   font-size: 1rem;
   font-stretch: normal;
   font-style: normal;
@@ -192,7 +180,7 @@ img {
 .option,
 .delete {
   color: #4386bf;
-  font-family: var(--robotoSlab);
+  font-family: 'Roboto Slab', serif;
   font-size: 1rem;
   font-stretch: normal;
   font-style: normal;
@@ -255,12 +243,12 @@ img {
 
 .chapter {
   font-size: 1rem;
-  font-family: var(--montserrat);
+  font-family: 'Montserrat', sans-serif;
 }
 
 .update-btn {
-  background-color: var(--blue);
-  font-family: var(--robotoSlab);
+  background-color: #0290ff;
+  font-family: 'Roboto Slab', serif;
   font-weight: 300;
   color: white;
   border-style: none;
@@ -277,7 +265,6 @@ img {
   border: solid 1px #e8e8e8;
 }
 
-/* AddNewBook */
 .add-section {
   width: 75rem;
   margin: 0 auto;
@@ -312,8 +299,8 @@ select {
 }
 
 .add-button {
-  background-color: var(--blue);
-  font-family: var(--robotoSlab);
+  background-color: #0290ff;
+  font-family: 'Roboto Slab', serif;
   border-style: none;
   color: white;
   font-weight: bold;
@@ -344,4 +331,8 @@ input {
 .check-btn {
   margin-top: 10%;
   margin-left: 45%;
+}
+
+.select {
+  font-size: 16px;
 }

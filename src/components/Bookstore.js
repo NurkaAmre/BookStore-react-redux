@@ -51,12 +51,14 @@ BookCard.defaultProps = {
   title: 'title',
   author: 'author',
   id: 'id',
+  category: 'category',
 };
 
 BookCard.propTypes = {
   id: PropTypes.string,
   title: PropTypes.string,
   author: PropTypes.string,
+  category: PropTypes.string,
 };
 
 export default BookCard;

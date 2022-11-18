@@ -33,14 +33,14 @@ const AddNewBook = () => {
           <input name="title" className="title-input hover" onChange={(e) => setTitle(e.target.value)} type="text" placeholder="Book title" value={titleA} />
           <input name="author" className="author-input hover" onChange={(e) => setAuthor(e.target.value)} type="text" placeholder="Author" value={authorA} />
           <select name="category" className="category-input hover" onChange={(e) => setCategory(e.target.value)} type="text" placeholder="Category" value={categoryA}>
-            <option value="" hidden>Genre</option>
-            <option value="Action">Action</option>
-            <option value="Programming">Programming</option>
-            <option value="Economy">Economy</option>
-            <option value="Math">Math</option>
-            <option value="Thriller">Thriller</option>
-            <option value="Cartoon">Cartoon</option>
-            <option value="Religion">Religion</option>
+            <option className="select" value="" hidden>Genre</option>
+            <option className="select" value="Action">Action</option>
+            <option className="select" value="Programming">Programming</option>
+            <option className="select" value="Economy">Economy</option>
+            <option className="select" value="Math">Math</option>
+            <option className="select" value="Thriller">Thriller</option>
+            <option className="select" value="Cartoon">Cartoon</option>
+            <option className="select" value="Religion">Religion</option>
           </select>
           <button
             className="add-button"
