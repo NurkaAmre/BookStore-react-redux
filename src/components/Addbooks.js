@@ -5,46 +5,36 @@ import { addBook } from './redux/books/books';
 
 const AddNewBook = () => {
   const dispatch = useDispatch();
-  const [title, setTitle] = useState('');
-  const [author, setAuthor] = useState('');
-  const [category, setCategory] = useState('');
+  const [titleA, setTitle] = useState('');
+  const [authorA, setAuthor] = useState('');
+  const [categoryA, setCategory] = useState('');
 
-  const getTitle = ({ target }) => setTitle(target.value);
-  const getAuthor = ({ target }) => setAuthor(target.value);
-  const getCategory = (({ target }) => setCategory(target.value));
-
-  const addToStore = (title, author) => {
+  const handleSbt = (e) => {
+    e.preventDefault();
     const book = {
       id: uuid(),
-      title,
-      author,
-      category,
+      title: titleA,
+      author: authorA,
+      category: categoryA,
     };
-    dispatch(addBook(book));
     setTitle('');
     setAuthor('');
+    setCategory('');
+    if (titleA && authorA && categoryA) {
+      dispatch(addBook(book));
+    }
   };
+
   return (
     <>
       <h3>ADD NEW BOOK</h3>
-      <form>
-        <input name="title" className="title-input" onChange={getTitle} type="text" placeholder="Book title" value={title} required />
-        <input name="author" className="author-input" onChange={getAuthor} type="text" placeholder="Author" value={author} required />
-        <select name="genre" onChange={getCategory} required>
-          <option value="" hidden>Genre</option>
-          <option value="Action">Action</option>
-          <option value="Programming">Programming</option>
-          <option value="Economy">Economy</option>
-          <option value="Math">Math</option>
-          <option value="Thriller">thriller</option>
-        </select>
+      <form onSubmit={handleSbt}>
+        <input name="title" className="title-input" onChange={(e) => setTitle(e.target.value)} type="text" placeholder="Book title" value={titleA} />
+        <input name="author" className="author-input" onChange={(e) => setAuthor(e.target.value)} type="text" placeholder="Author" value={authorA} />
+        <input name="category" className="category-input" onChange={(e) => setCategory(e.target.value)} type="text" placeholder="Category" value={categoryA} />
         <button
           className="add-button"
           type="submit"
-          onClick={(e) => {
-            e.preventDefault();
-            addToStore(title, author);
-          }}
         >
           Add book
         </button>
