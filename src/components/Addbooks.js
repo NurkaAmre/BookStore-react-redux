@@ -27,18 +27,29 @@ const AddNewBook = () => {
 
   return (
     <>
-      <h3>ADD NEW BOOK</h3>
-      <form onSubmit={handleSbt}>
-        <input name="title" className="title-input" onChange={(e) => setTitle(e.target.value)} type="text" placeholder="Book title" value={titleA} />
-        <input name="author" className="author-input" onChange={(e) => setAuthor(e.target.value)} type="text" placeholder="Author" value={authorA} />
-        <input name="category" className="category-input" onChange={(e) => setCategory(e.target.value)} type="text" placeholder="Category" value={categoryA} />
-        <button
-          className="add-button"
-          type="submit"
-        >
-          Add book
-        </button>
-      </form>
+      <section className="add-section">
+        <h3>ADD NEW BOOK</h3>
+        <form className="d-flex" onSubmit={handleSbt}>
+          <input name="title" className="title-input hover" onChange={(e) => setTitle(e.target.value)} type="text" placeholder="Book title" value={titleA} />
+          <input name="author" className="author-input hover" onChange={(e) => setAuthor(e.target.value)} type="text" placeholder="Author" value={authorA} />
+          <select name="category" className="category-input hover" onChange={(e) => setCategory(e.target.value)} type="text" placeholder="Category" value={categoryA}>
+            <option className="select" value="" hidden>Genre</option>
+            <option className="select" value="Action">Action</option>
+            <option className="select" value="Programming">Programming</option>
+            <option className="select" value="Economy">Economy</option>
+            <option className="select" value="Math">Math</option>
+            <option className="select" value="Thriller">Thriller</option>
+            <option className="select" value="Cartoon">Cartoon</option>
+            <option className="select" value="Religion">Religion</option>
+          </select>
+          <button
+            className="add-button"
+            type="submit"
+          >
+            ADD BOOK
+          </button>
+        </form>
+      </section>
     </>
   );
 };

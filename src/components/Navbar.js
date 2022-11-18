@@ -1,11 +1,11 @@
 import { NavLink } from 'react-router-dom';
 
 const Navbar = () => (
-  <header>
+  <header className="top-section d-flex">
     <nav>
-      <NavLink to="/">Bookstore CMS</NavLink>
-      <NavLink to="/">Books</NavLink>
-      <NavLink to="/categories">Categories</NavLink>
+      <NavLink to="/" className="logo">Bookstore CMS</NavLink>
+      <NavLink to="/" className="d-flex arip">Books</NavLink>
+      <NavLink to="/categories" className="d-flex arip">Categories</NavLink>
     </nav>
   </header>
 );

@@ -12,6 +12,7 @@ const Categories = () => {
     <>
       <p>{status}</p>
       <button
+        className="add-button check-btn"
         type="button"
         onClick={handleStatus}
       >
