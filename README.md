@@ -2,7 +2,7 @@
 
 # Book Store
 
-<h2 align="center">User can add book by title and author and remove books, comment and edit books. When user add books displays hwo much percent readed, curent chapter.</h2>
+<h2 align="center">User can add book by title and author and remove books, comment and edit books. When user add books displays how much percent readed, curent chapter.</h2>
 
 <p align="center">
   <img src="./assets/bs.jpeg" width="750" title="hover text">
